@@ -36,8 +36,8 @@
 <script setup lang="ts">
 import * as type from '../types';
 import { db } from '../API';
-import { computed, ref, toRefs, watch } from 'vue';
-import { Accordion, Modal, Button, TextInput, MultiSelectInput, CheckboxInput } from 'custom-mbd-components';
+import { computed, ref, toRefs } from 'vue';
+import { Accordion, Modal, Button, TextInput, MultiSelectInput } from 'custom-mbd-components';
 import { makeAccordionItems, getAccordionHash } from '../global';
 
 const props = withDefaults(

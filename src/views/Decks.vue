@@ -57,8 +57,7 @@
 <script setup lang="ts">
 import Deck from '../components/Deck.vue';
 import * as type from '../types';
-import { computed, ref, toRefs } from 'vue';
-import { newId } from '../global';
+import { ref, toRefs } from 'vue';
 import { RadioGroup, SelectInput, Modal, TextInput } from 'custom-mbd-components';
 const props = withDefaults(defineProps<{ user: type.User; deck: type.Deck }>(), {});
 const { user, deck } = toRefs(props);

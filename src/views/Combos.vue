@@ -42,10 +42,9 @@
 <script setup lang="ts">
 import * as type from '../types';
 import { db } from '../API';
-import { computed, ref, toRefs, watch } from 'vue';
-import { Accordion, Modal, Button, TextInput, MultiSelectInput, CheckboxInput } from 'custom-mbd-components';
+import { computed, ref, toRefs } from 'vue';
+import { Accordion, Modal, Button, TextInput, MultiSelectInput } from 'custom-mbd-components';
 import { makeAccordionItems, getAccordionHash } from '../global';
-import { title } from 'process';
 const props = withDefaults(defineProps<{ deck: type.Deck; activeCombos: type.ComboArray[]; inActiveCombos: type.ComboArray[] }>(), {});
 const { deck, activeCombos, inActiveCombos } = toRefs(props);
 
