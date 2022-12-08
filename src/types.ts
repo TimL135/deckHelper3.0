@@ -4,18 +4,20 @@ export interface User {
   ownCards: { [key: Id]: ExtraCard };
 }
 export type Id = string;
+export type Name = string;
 
 export type DeckType = { [key: Id]: Card } | { [key: Id]: ExtraCard };
 
-export type CardGroup = [string, string[]];
+export type CardGroupArray = [Name, Id[]];
+export type ComboArray = [Name, Combo];
 
 export interface Deck {
   mainCards: { [key: Id]: Card };
   extraCards: { [key: Id]: ExtraCard };
   sideCards: { [key: Id]: Card };
   alternativCards: { [key: Id]: Card };
-  combos: { [key: Id]: Combo };
-  cardGroups: { [name: string]: Id[] };
+  combos: { [name: Name]: Combo };
+  cardGroups: { [name: Name]: Id[] };
 }
 export interface ExtraCard {
   amount: number;
@@ -40,7 +42,7 @@ export interface Properties {
 }
 export interface Combo {
   cards: Id[];
-  cardsGroups: Id[];
+  cardsGroups: Name[];
 }
 
 export interface Db {
